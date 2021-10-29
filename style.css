@@ -1,0 +1,198 @@
+/* ------------------------------------- */
+/* Global Styles */
+/* ------------------------------------- */
+:root {
+  --darkPink: #26081E;
+  --mediumPink: #390B2C;
+  --pink: #FEACBE;
+  --black: #000000;
+  --white: white;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  color: var(--darkPink);
+  margin: 0 auto;
+  background-color: var(--black);
+}
+
+header {
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  padding-top: 3rem;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+button {
+  color: var(--white);
+  background-color: var(--darkPink);
+}
+
+button, input[type="submit"], input[type="button"] {
+  margin-top:2rem;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--white);
+  background: var(--darkPink);
+  border: none;
+  cursor: pointer;
+  border-radius:5px;
+  padding: 10px 20px;
+}
+
+input {
+  margin-top: 1rem;
+}
+
+input[type="radio"] {
+  width: 25px;
+  height: 25px;
+}
+
+.label {
+  font-size: 1.5rem;
+}
+
+/* ------------------------------------- */
+/* Main Card */
+/* ------------------------------------- */
+.card{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 525px;
+  padding: 20px 50px;
+  margin: 0 auto;
+  background:var(--pink);
+  border: none;
+}
+
+/* ------------------------------------- */
+/* start screen */
+/* ------------------------------------- */
+.js-startDisplay {
+  padding-top: 6rem;
+}
+
+/* ------------------------------------- */
+/* Question and Answers */
+/* ------------------------------------- */
+#questionNum, #score {
+  text-transform: uppercase;
+}
+
+#wrapperQuestion {
+  margin-top: .5rem;
+}
+#options {
+  margin-top: 1.25rem;
+}
+
+#scoreFinal {
+  text-transform: initial;
+}
+
+.quizStats {
+  font-size: 1.5rem;
+  color: var(--darkPink);
+}
+
+.statusFlex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-answer, .wrong-answer {
+  font-size: 2rem;
+}
+
+#scoreFinal {
+  font-size: 2rem;
+}
+
+legend {
+  font-size: 1.75rem;
+  border: none;
+}
+
+label {
+  font-size: 1.25rem;
+}
+
+.cardCorrect {
+  color: var(--darkPink);
+  background-color: #cee1ac;
+}
+
+.cardIncorrect {
+  color: var(--darkPink);
+  background-color: #FF5733;
+}
+
+/* ------------------------------------- */
+/* desktop view */
+/* ------------------------------------- */
+@media all and (min-width: 600px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    height: 550px;
+  }
+
+  .js-startDisplay {
+    flex-direction: column;
+    padding: 6rem 7rem;
+  }
+
+  .js-startDisplay h2 {
+    font-size: 2.5rem;
+  }
+
+  .statusFlex {
+    flex-direction: row;
+    font-size: 18px;
+  }
+
+  .statusFlex p {
+    margin: 0;
+    padding: .70rem 2rem 2rem 0;
+  }
+
+  .right-answer, .wrong-answer {
+    font-size: 3rem;
+  }
+
+  #scoreFinal {
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 5rem;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 3rem;
+  }
+}
